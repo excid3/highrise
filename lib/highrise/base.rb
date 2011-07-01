@@ -2,6 +2,8 @@ require 'active_resource'
 
 module Highrise
   class Base < ActiveResource::Base
+    self.format = :xml
+
     protected
     # Dynamic finder for attributes
     def self.method_missing(method, *args)
